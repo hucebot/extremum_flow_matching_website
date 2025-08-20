@@ -28,6 +28,9 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Extremum Flow Matching for<br/>Offline Goal Conditioned Reinforcement Learning</h1>
+            <h2 style="display:block">
+              <span class="is-size-4">IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids) 2025</span>
+            </h2>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
               <a href="https://leph.io/quentinrouxel/">Quentin Rouxel</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -94,7 +97,26 @@
                   <span>Code</span>
                 </a>
               </span>
+              <span class="link-block">
+                <a href="https://youtu.be/5FszFNZ3CQg"
+                   class="external-link button is-normal is-rounded is-dark is-size-5">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom: 0">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds no-bottom-padding">
+        <iframe height="500" src="https://www.youtube.com/embed/5FszFNZ3CQg" title="YouTube video player" frameborder="0" style="border: 1px solid #bbb; border-radius: 10px; width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -110,7 +132,11 @@
         </div>
         <div class="content has-text-justified is-size-5">
             <br/>
-            <p> Imitation learning is a promising approach for enabling generalist capabilities in humanoid robots, but its scaling is fundamentally constrained by the scarcity of high-quality expert demonstrations. This limitation can be mitigated by leveraging suboptimal, open-ended play data, often easier to collect and offering greater diversity. This work builds upon recent advances in generative modeling, specifically Flow Matching, an alternative to Diffusion models. We introduce a method for estimating the extremum of the learned distribution by leveraging the unique properties of Flow Matching, namely, deterministic transport and support for arbitrary source distributions. We apply this method to develop several goal-conditioned imitation and reinforcement learning algorithms based on Flow Matching, where policies are conditioned on both current and goal observations. We explore and compare different architectural configurations by combining core components, such as critic, planner, actor, or world model, in various ways. We evaluated our agents on the OGBench benchmark and analyzed how different demonstration behaviors during data collection affect performance in a 2D non-prehensile pushing task. Furthermore, we validated our approach on real hardware by deploying it on the Talos humanoid robot to perform complex manipulation tasks based on high-dimensional image observations, featuring a sequence of pick-and-place and articulated object manipulation in a realistic kitchen environment.</p>
+            <p>Imitation learning is a promising approach for enabling generalist capabilities in humanoid robots, but its scaling is fundamentally constrained by the scarcity of high-quality expert demonstrations.
+This limitation can be mitigated by leveraging suboptimal, open-ended play data, often easier to collect and offering greater diversity.
+This work builds upon recent advances in generative modeling, specifically Flow Matching, an alternative to Diffusion models.
+We introduce a method for estimating the minimum or maximum of the learned distribution by leveraging the unique properties of Flow Matching, namely, deterministic transport and support for arbitrary source distributions.
+We apply this method to develop several goal-conditioned imitation and reinforcement learning algorithms based on Flow Matching, where policies are conditioned on both current and goal observations. We explore and compare different architectural configurations by combining core components, such as critic, planner, actor, or world model, in various ways. We evaluated our agents on the OGBench benchmark and analyzed how different demonstration behaviors during data collection affect performance in a 2D non-prehensile pushing task. Furthermore, we validated our approach on real hardware by deploying it on the Talos humanoid robot to perform complex manipulation tasks based on high-dimensional image observations, featuring a sequence of pick-and-place and articulated object manipulation in a realistic kitchen environment.</p>
         </div>
       </div>
     </div>
@@ -291,6 +317,22 @@
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
+      <div class="column is-two-thirds">
+            <h2 class="title is-2" style="width: 100%; text-align: center; padding-bottom: 10px;">Goal Conditioned Agents</h2>
+            <div class="row" style="margin-bottom: 10px">
+             <p>This work explores and compares five architectures for goal-conditioned agents based on Extremum Flow Matching, experimenting with different ways to combine modular components like the Critic, Planner, Actor, and World Model.<p>
+            </div>
+            <div class="row" style="margin-bottom: 10px">
+                <img src="resources/media/agents.png" class="interpolation-image" alt="extremum flow matching agents" style="display: block; margin-left: auto; margin-right: auto" />
+            </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
       <div class="column is-full-width">
             <h2 class="title is-2" style="width: 100%; text-align: center; padding-bottom: 10px;">Comparison and Impact of Demonstration Behaviors</h2>
             <div class="row" style="margin-bottom: 10px">
@@ -446,15 +488,52 @@
           <a href="resources/extremum_flow_matching_2025.pdf"><img src="resources/pages.png" class="interpolation-image" alt="Paper pages" style="display: block; margin-left: auto; margin-right: auto; width: 70%" /></a>
       </div>
       <div class="row is-full-width">
-        <pre><code>@article{rouxel2025extremumflowmatchingoffline,
-      title={Extremum Flow Matching for Offline Goal Conditioned Reinforcement Learning}, 
-      author={Quentin Rouxel and Clemente Donoso and Fei Chen and Serena Ivaldi and Jean-Baptiste Mouret},
-      year={2025},
-      journal={arXiv preprint arXiv:2505.19717},
+        <pre><code>@inproceedings{rouxel2025extremumflowmatching,
+  title={Extremum Flow Matching for Offline Goal Conditioned Reinforcement Learning}, 
+  author={Rouxel, Quentin and Donoso, Clemente and Chen, Fei and Ivaldi, Serena and Mouret, Jean-Baptiste},
+  booktitle={2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids)},
+  year={2025},
+  organization={IEEE}
 }</code></pre>
       </div>
     </div>
   </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title is-2" style="width: 100%; text-align: center; padding-bottom: 10px;">Related Projects</h2>
+        <div class="columns is-centered">
+            <!--
+            <div class="column box">
+                <span class="pub-year2">2025</span>
+                <a href="https://hucebot.github.io/extremum_flow_matching_website/">
+                    <img src="thumb/extremum_flow_matching.png"/>
+                <span class="pub-title">Extremum Flow Matching</span>
+                </a>
+            </div>
+            -->
+            <div class="column box">
+                <h4>Flow Multi-Support (2024)</h4>
+                <a href="https://hucebot.github.io/flow_multisupport_website/">
+                <img src="resources/media/flow_multisupport.png"/>
+                </a>
+            </div>
+            <div class="column box">
+                <h4>Words2Contact (2024)</h4>
+                <span>2024</span>
+                <a href="https://hucebot.github.io/words2contact_website/">
+                <img src="resources/media/words2contact.png"/>
+                </a>
+            </div>
+            <div class="column box">
+                <h4>SEIKO Controller (2023)</h4>
+                <a href="https://hucebot.github.io/seiko_controller_website/">
+                <img src="resources/media/seiko_controller.png"/>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 </body>
